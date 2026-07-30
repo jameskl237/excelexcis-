@@ -1,0 +1,56 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.grid > * {
+  height: 100%;
+}
+
+.iconWrap {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--accent-bg);
+  margin-bottom: 16px;
+  transition: background 0.3s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-reveal]:hover .iconWrap {
+  background: var(--accent-border);
+  transform: scale(1.05) rotate(-4deg);
+}
+
+.icon {
+  display: flex;
+  color: var(--accent);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+[data-reveal]:hover .icon {
+  transform: scale(1.1);
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: var(--text-h);
+}
+
+.cardDesc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+  margin: 0;
+  flex: 1;
+}

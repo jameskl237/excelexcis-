@@ -1,0 +1,31 @@
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  pointer-events: none;
+}
+
+.bar {
+  height: 2px;
+  background: var(--accent);
+  transform-origin: left;
+  will-change: transform;
+}
+
+.label {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  font: 600 12px/1 ui-monospace, monospace;
+  letter-spacing: 0.2em;
+  color: var(--text);
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .label {
+    display: none;
+  }
+}

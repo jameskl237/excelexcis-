@@ -1,0 +1,16 @@
+.footer {
+  border-top: 1px solid var(--border);
+  padding: 24px;
+}
+
+.inner {
+  max-width: 1126px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 14px;
+  color: var(--text);
+  margin: 0;
+}

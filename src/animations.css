@@ -1,0 +1,111 @@
+@keyframes float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-20px) scale(1.05); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.1); }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.rv {
+  opacity: 0;
+  transform: translateY(30px);
+  filter: blur(6px);
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.9s ease;
+}
+
+.rv.in {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+.rv-d1 { transition-delay: 0.08s; }
+.rv-d2 { transition-delay: 0.16s; }
+.rv-d3 { transition-delay: 0.24s; }
+.rv-d4 { transition-delay: 0.32s; }
+.rv-d5 { transition-delay: 0.40s; }
+.rv-d6 { transition-delay: 0.48s; }
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px) scale(0.97);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-reveal].in {
+  opacity: 1;
+  transform: none;
+}
+
+[data-reveal-left] {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-reveal-left].in {
+  opacity: 1;
+  transform: none;
+}
+
+[data-reveal-right] {
+  opacity: 0;
+  transform: translateX(30px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-reveal-right].in {
+  opacity: 1;
+  transform: none;
+}
+
+.gradient-text {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+}
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-border), transparent);
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rv,
+  [data-reveal],
+  [data-reveal-left],
+  [data-reveal-right] {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+}
