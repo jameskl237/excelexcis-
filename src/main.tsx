@@ -9,6 +9,8 @@ import { Home } from './pages/Home/Home'
 import { About } from './pages/About/About'
 import { Services } from './pages/Services/Services'
 import { Contact } from './pages/Contact/Contact'
+import { Memories } from './pages/Memories/Memories'
+import { MemoriesDetail } from './pages/Memories/MemoriesDetail'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -20,6 +22,8 @@ createRoot(document.getElementById('root')!).render(
             <Route path="about" element={<About />} />
             <Route path="services" element={<Services />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="memories" element={<Memories />} />
+            <Route path="memories/:slug" element={<MemoriesDetail />} />
           </Route>
         </Routes>
       </BrowserRouter>

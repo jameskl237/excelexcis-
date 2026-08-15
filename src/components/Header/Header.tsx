@@ -11,6 +11,7 @@ const navLinks: NavLinkType[] = [
   { label: 'Services', href: '/services' },
   { label: 'À propos', href: '/about' },
   { label: 'Contact', href: '/contact' },
+  { label: 'Memories', href: '/memories' },
 ]
 
 export function Header() {
