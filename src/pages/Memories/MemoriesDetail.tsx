@@ -4,6 +4,7 @@ import { Section } from '../../components/Section/Section'
 import { Button } from '../../components/Button/Button'
 import { cn } from '../../lib/cn'
 import { getFormationBySlug } from '../../data/memories'
+import { OrderForm } from '../../components/OrderForm/OrderForm'
 import styles from './MemoriesDetail.module.css'
 
 const paragraphs = [
@@ -76,6 +77,8 @@ export function MemoriesDetail() {
               Découvrir d'autres formations
             </Button>
           </div>
+
+          <OrderForm mode="order" formationTitle={formation.title} />
         </div>
       </Section>
     </>
