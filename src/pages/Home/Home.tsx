@@ -4,6 +4,7 @@ import { Services } from './sections/Services/Services'
 import { Portfolio } from './sections/Portfolio/Portfolio'
 import { Team } from './sections/Team/Team'
 import { Contact } from './sections/Contact/Contact'
+import { OrderTraining } from './sections/OrderTraining/OrderTraining'
 
 export function Home() {
   return (
@@ -17,6 +18,7 @@ export function Home() {
       <Portfolio />
       <Team />
       <Contact />
+      <OrderTraining />
     </>
   )
 }

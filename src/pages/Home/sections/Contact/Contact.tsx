@@ -31,10 +31,10 @@ export function Contact() {
           </Button>
         </form>
         <div className={styles.info} data-reveal style={{ transitionDelay: '0.15s' }}>
-          <h3 className={styles.infoTitle}>Nos coordonnées</h3>
-          <p className={styles.infoText}>contact@excelexcis.fr</p>
-          <p className={styles.infoText}>+33 1 23 45 67 89</p>
-          <p className={styles.infoText}>Paris, France</p>
+            <h3 className={styles.infoTitle}>Nos coordonnées</h3>
+            <p className={styles.infoText}>onlineexcelcisgroup@gmail.com</p>
+            <p className={styles.infoText}>+237 6 74 72 71 00</p>
+            <p className={styles.infoText}>Yaounde, Cameroun</p>
         </div>
       </div>
     </Section>

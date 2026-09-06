@@ -9,8 +9,10 @@ import styles from './Header.module.css'
 const navLinks: NavLinkType[] = [
   { label: 'Accueil', href: '/' },
   { label: 'Services', href: '/services' },
+  { label: 'Formations', href: '/formations' },
   { label: 'À propos', href: '/about' },
   { label: 'Contact', href: '/contact' },
+  { label: 'Memories', href: '/memories' },
 ]
 
 export function Header() {

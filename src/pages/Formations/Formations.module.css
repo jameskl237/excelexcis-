@@ -1,0 +1,103 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.grid > * {
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  flex: 1;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.date {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+
+.badge {
+  font-size: 12px;
+  font-weight: 600;
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+.cardTitle {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--text-h);
+  margin: 0 0 10px;
+}
+
+.cardDesc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+  margin: 0 0 16px;
+}
+
+.meta {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.themes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.theme {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+
+.cardActions {
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
