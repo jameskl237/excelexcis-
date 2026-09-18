@@ -7,8 +7,8 @@ export function Contact() {
   return (
     <>
       <Helmet>
-        <title>excelexcis — Contact</title>
-        <meta name="description" content="Contactez excelexcis pour vos projets" />
+        <title>Excelcis Group — Contact</title>
+        <meta name="description" content="contactez Excelcis Group pour vos projets" />
       </Helmet>
       <Section title="Contactez-nous" subtitle="Une question ? Un projet ? Écrivez-nous !">
         <div className={styles.columns}>

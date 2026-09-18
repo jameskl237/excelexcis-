@@ -18,17 +18,16 @@ type ButtonProps = ButtonAsButton | ButtonAsLink | ButtonAsRouterLink
 export function Button(props: ButtonProps) {
   const variant = props.variant ?? 'primary'
   const size = props.size ?? 'md'
-  const className = props.className
 
   if (props.as === 'a') {
-    const { as: _, ...anchorRest } = props as ButtonAsLink
+    const { as: _, variant: _v, size: _s, className, ...anchorRest } = props as ButtonAsLink
     return (
       <a className={cn(styles.btn, styles[variant], styles[size], className)} {...anchorRest} />
     )
   }
 
   if (props.as === 'link') {
-    const { as: _, to, children, ...linkRest } = props as ButtonAsRouterLink
+    const { as: _, to, children, variant: _v, size: _s, className, ...linkRest } = props as ButtonAsRouterLink
     return (
       <Link to={to} className={cn(styles.btn, styles[variant], styles[size], className)} {...linkRest}>
         {children}
@@ -36,7 +35,7 @@ export function Button(props: ButtonProps) {
     )
   }
 
-  const { as: _, ...buttonRest } = props as ButtonAsButton
+  const { as: _, variant: _v, size: _s, className, ...buttonRest } = props as ButtonAsButton
   return (
     <button className={cn(styles.btn, styles[variant], styles[size], className)} {...buttonRest} />
   )

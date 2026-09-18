@@ -43,7 +43,7 @@ export function Memories() {
   return (
     <>
       <Helmet>
-        <title>excelexcis — Memories</title>
+        <title>Excelcis Group — Memories</title>
         <meta name="description" content="Les souvenirs de nos formations passées, en images" />
       </Helmet>
       <Section title="Memories" subtitle="Nos formations passées, en images">

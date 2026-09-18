@@ -17,7 +17,13 @@ const archifItem = {
 
 export function Portfolio() {
   return (
-    <Section id="portfolio" title="Nos réalisations" subtitle="Formations et projets dont nous sommes fiers" variant="glass">
+    <Section
+      id="portfolio"
+      eyebrow="Références"
+      title="Nos réalisations"
+      subtitle="Formations et projets menés auprès d'institutions publiques et d'entreprises"
+      variant="glass"
+    >
       <div className={styles.grid}>
         {visibleFormations.map((formation, i) => (
           <div key={formation.slug} data-reveal style={{ transitionDelay: `${i * 0.08}s` }}>
@@ -41,11 +47,18 @@ export function Portfolio() {
 
         <div data-reveal style={{ transitionDelay: `${visibleFormations.length * 0.08}s` }}>
           <Card variant="default" className={styles.imageCard}>
-            <div className={styles.imageWrap}>
-              <img className={styles.image} src={archifItem.image} alt={archifItem.title} loading="lazy" />
-              <span className={styles.category}>{archifItem.category}</span>
-            </div>
-            <h3 className={styles.cardTitle}>{archifItem.title}</h3>
+            <a
+              href="https://archivefacile.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.link}
+            >
+              <div className={styles.imageWrap}>
+                <img className={styles.image} src={archifItem.image} alt={archifItem.title} loading="lazy" />
+                <span className={styles.category}>{archifItem.category}</span>
+              </div>
+              <h3 className={styles.cardTitle}>{archifItem.title}</h3>
+            </a>
           </Card>
         </div>
       </div>

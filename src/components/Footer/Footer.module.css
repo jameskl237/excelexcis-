@@ -1,16 +1,112 @@
 .footer {
   border-top: 1px solid var(--border);
-  padding: 24px;
+  padding: 64px 24px 28px;
+  background: var(--bg);
 }
 
 .inner {
   max-width: 1126px;
   margin: 0 auto;
-  text-align: center;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.2fr;
+  gap: 48px;
+  padding-bottom: 44px;
+}
+
+.brandCol {
+  max-width: 320px;
+}
+
+.logo {
+  font-family: var(--heading);
+  font-weight: 800;
+  font-size: 21px;
+  letter-spacing: -0.5px;
+  color: var(--text-h);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+.tagline {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+  margin: 0;
+}
+
+.navCol {
+  min-width: 0;
+}
+
+.colTitle {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-h);
+  margin: 0 0 16px;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link {
+  font-size: 14px;
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--accent);
+}
+
+.plain {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
 }
 
 .copyright {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--text);
+  opacity: 0.8;
   margin: 0;
+}
+
+@media (max-width: 900px) {
+  .top {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .brandCol {
+    grid-column: 1 / -1;
+    max-width: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer {
+    padding: 48px 20px 24px;
+  }
+
+  .top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
 }

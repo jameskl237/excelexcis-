@@ -3,24 +3,26 @@ import { Section } from '../../components/Section/Section'
 import styles from './About.module.css'
 
 const domaines = [
-  'Développement web & applications mobiles',
-  'Design UX/UI & identité visuelle',
-  'Consulting & stratégie technologique',
-  'Formation professionnelle (archivage, administration, technologies)',
-  'Maintenance, support & infrastructure IT',
+  'Solutions web & logicielles sur mesure',
+  'Intelligence artificielle (IA et agents)',
+  "Systèmes d'information (GED, ERP)",
+  'Automatisation des processus métier',
+  'Archivage physique et numérique',
+  'Conseil digital & audit',
+  'Formation professionnelle (archivage, technologies, administration)',
 ]
 
 export function About() {
   return (
     <>
       <Helmet>
-        <title>Excelexcis Group — À propos</title>
-        <meta name="description" content="Découvrez Excelexcis Group, entreprise multi-panoramique fondée en 2026" />
+        <title>Excelcis Group — À propos</title>
+        <meta name="description" content="Découvrez Excelcis Group, entreprise multi-panoramique fondée en 2026" />
       </Helmet>
       <Section title="À propos" subtitle="Qui sommes-nous ?">
         <div className={styles.content}>
           <p data-reveal>
-            <strong>Excelexcis Group</strong> est une entreprise multi-panoramique
+            <strong>Excelcis Group</strong> est une entreprise multi-panoramique
             fondée en 2026, née d'une conviction forte : celle qu'une organisation
             agile et polyvalente peut répondre aux défis les plus variés avec la
             même exigence de qualité.
@@ -45,11 +47,12 @@ export function About() {
           </div>
 
           <p data-reveal style={{ transitionDelay: '0.3s' }}>
-            Notre équipe réunit des profils complémentaires — développeurs,
-            designers, formateurs et consultants — qui partagent une même
-            philosophie : l'écoute, la rigueur et l'innovation au service de
-            chaque projet. Chez Excelexcis Group, nous ne livrons pas seulement
-            une prestation : nous construisons une relation durable avec nos
+            Notre équipe est résolument multi-panoramique : ingénieurs full
+            stack, ingénieurs de travaux informatique, archivistes assermentées
+            et ingénieur en pétrochimie partagent une même philosophie :
+            l'écoute, la rigueur et l'innovation au service de chaque projet.
+            Chez Excelcis Group, nous ne livrons pas seulement une
+            prestation : nous construisons une relation durable avec nos
             clients, fondée sur la confiance et les résultats.
           </p>
         </div>

@@ -2,48 +2,62 @@ import { Helmet } from 'react-helmet-async'
 import { Section } from '../../components/Section/Section'
 import { Card } from '../../components/Card/Card'
 import type { IconComponent } from '../../components/Icons'
-import { Monitor, Palette, BarChart, Book, Settings } from '../../components/Icons'
+import { Code, Brain, Database, Workflow, Search, Book, GraduationCap } from '../../components/Icons'
 import type { Service } from '../../types'
 import styles from './Services.module.css'
 
 const iconMap: Record<string, IconComponent> = {
-  monitor: Monitor,
-  palette: Palette,
-  chart: BarChart,
+  code: Code,
+  brain: Brain,
+  database: Database,
+  workflow: Workflow,
+  search: Search,
   book: Book,
-  settings: Settings,
+  cap: GraduationCap,
 }
 
 const services: Service[] = [
   {
-    id: 'dev',
-    title: 'Développement web',
-    description: 'Sites vitrines, applications métier, e-commerce — des solutions robustes et modernes.',
-    icon: 'monitor',
+    id: 'sur-mesure',
+    title: 'Solutions web & logicielles sur mesure',
+    description: 'Applications métier, plateformes web et logiciels conçus pour les besoins spécifiques de votre entreprise.',
+    icon: 'code',
   },
   {
-    id: 'design',
-    title: 'Design UX/UI',
-    description: 'Interfaces intuitives et engageantes qui transforment vos visiteurs en clients.',
-    icon: 'palette',
+    id: 'ia',
+    title: 'Intelligence artificielle',
+    description: 'IA et agents intelligents intégrés à vos outils pour automatiser et accélérer vos décisions.',
+    icon: 'brain',
   },
   {
-    id: 'consulting',
-    title: 'Consulting tech',
-    description: 'Accompagnement stratégique pour vos choix techniques et architecturaux.',
-    icon: 'chart',
+    id: 'si',
+    title: "Systèmes d'information",
+    description: 'Gestion électronique des documents (GED) et ERP pour structurer et fiabiliser votre information.',
+    icon: 'database',
   },
   {
-    id: 'formations',
-    title: 'Formations',
-    description: 'Archivage, technologies, administration — des formations sur mesure adaptées à tous les secteurs.',
+    id: 'automatisation',
+    title: 'Automatisation',
+    description: 'Automatisation de vos processus métier pour gagner en efficacité et réduire les tâches répétitives.',
+    icon: 'workflow',
+  },
+  {
+    id: 'archivage',
+    title: 'Archivage',
+    description: 'Archivage physique et numérique par des archivistes assermentées, de la collecte à la conservation.',
     icon: 'book',
   },
   {
-    id: 'support',
-    title: 'Maintenance & Support',
-    description: 'Suivi continu, mises à jour et support réactif pour vos projets.',
-    icon: 'settings',
+    id: 'conseil',
+    title: 'Conseil digital & audit',
+    description: 'Diagnostic et accompagnement stratégique pour piloter votre transformation numérique.',
+    icon: 'search',
+  },
+  {
+    id: 'formations',
+    title: 'Formation professionnelle',
+    description: 'Formations sur mesure en archivage, technologies et administration, adaptées à tous les secteurs.',
+    icon: 'cap',
   },
 ]
 
@@ -51,10 +65,10 @@ export function Services() {
   return (
     <>
       <Helmet>
-        <title>excelexcis — Services</title>
-        <meta name="description" content="Découvrez nos services de développement web, design UX/UI, formations, consulting et support" />
+        <title>Excelcis Group — Services</title>
+        <meta name="description" content="Solutions sur mesure, IA, systèmes d'information, automatisation, archivage, conseil et formation pour les entreprises" />
       </Helmet>
-      <Section title="Nos services" subtitle="Des solutions adaptées à vos besoins">
+      <Section title="Nos services" subtitle="Une équipe multi-panoramique au service des entreprises">
         <div className={styles.grid}>
           {services.map((s, i) => {
             const Icon = iconMap[s.icon]

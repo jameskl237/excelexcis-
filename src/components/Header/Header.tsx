@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { cn } from '../../lib/cn'
 import { useTheme } from '../../hooks/useTheme'
 import type { NavLink as NavLinkType } from '../../types'
@@ -17,13 +17,26 @@ const navLinks: NavLinkType[] = [
 
 export function Header() {
   const [open, setOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const { theme, toggle } = useTheme()
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 40)
+    }
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  const transparent = pathname === '/' && !scrolled && !open
 
   return (
-    <header className={styles.header}>
+    <header className={cn(styles.header, transparent && styles.transparent)}>
       <div className={styles.inner}>
         <Link to="/" className={styles.logo}>
-          excelexcis
+          excelcis group
         </Link>
 
         <div className={styles.group}>

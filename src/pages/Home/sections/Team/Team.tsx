@@ -4,15 +4,22 @@ import type { TeamMember } from '../../../../types'
 import styles from './Team.module.css'
 
 const members: TeamMember[] = [
-  { id: '1', name: 'Jean Dupont', role: 'Fondateur & CEO', photo: '' },
-  { id: '2', name: 'Marie Martin', role: 'Lead développeuse', photo: '' },
-  { id: '3', name: 'Paul Durand', role: 'Designer UX', photo: '' },
-  { id: '4', name: 'Sophie Lambert', role: 'Formatrice', photo: '' },
+  { id: '1', name: 'Njandjeu Lahakio David Andreas', role: 'Ingénieur Full Stack', photo: '' },
+  { id: '2', name: 'Samo Ndabidjang Marlyne Majolie', role: "Archiviste assermentée — 16 ans d'expérience", photo: '' },
+  { id: '3', name: 'Djiele James Kamga', role: 'Ingénieur de travaux informatique — Backend & architecture', photo: '' },
+  { id: '4', name: 'Cyrielle Obe', role: 'Archiviste documentaliste', photo: '' },
+  { id: '5', name: 'Ryan Defo', role: 'Ingénieur de travaux informatique — Frontend & DevOps', photo: '' },
+  { id: '6', name: 'Djimgou Iris Danielle', role: 'Ingénieur en pétrochimie', photo: '' },
 ]
 
 export function Team() {
   return (
-    <Section id="team" title="Notre équipe" subtitle="Des passionnés à votre service">
+    <Section
+      id="team"
+      eyebrow="L'équipe"
+      title="Des profils complémentaires"
+      subtitle="Ingénieurs, archivistes assermentées et consultants réunis autour d'une même exigence"
+    >
       <div className={styles.grid}>
         {members.map((m, i) => (
           <div key={m.id} data-reveal style={{ transitionDelay: `${i * 0.08}s` }}>

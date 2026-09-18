@@ -19,7 +19,7 @@ export function FormationDetail() {
   return (
     <>
       <Helmet>
-        <title>{`excelexcis — ${formation.title}`}</title>
+        <title>{`Excelcis Group — ${formation.title}`}</title>
         <meta name="description" content={formation.description} />
       </Helmet>
       <Section title={formation.title} subtitle="Détails de la formation">

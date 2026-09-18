@@ -6,15 +6,22 @@ interface SectionProps {
   id?: string
   children: ReactNode
   className?: string
+  eyebrow?: string
   title?: string
   subtitle?: string
   variant?: 'default' | 'alt' | 'glass'
 }
 
-export function Section({ id, children, className, title, subtitle, variant = 'default' }: SectionProps) {
+export function Section({ id, children, className, eyebrow, title, subtitle, variant = 'default' }: SectionProps) {
   return (
     <section id={id} className={cn(styles.section, styles[variant], className)}>
       <div className={styles.inner}>
+        {eyebrow && (
+          <p className={cn(styles.eyebrow, 'rv')}>
+            <span className={styles.eyebrowDash} />
+            {eyebrow}
+          </p>
+        )}
         {title && <h2 className={cn(styles.title, 'rv')}>{title}</h2>}
         {subtitle && <p className={cn(styles.subtitle, 'rv', 'rv-d1')}>{subtitle}</p>}
         {children}
