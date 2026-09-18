@@ -120,6 +120,17 @@
   margin-top: 5px;
 }
 
+.impact {
+  margin: 22px 0 0;
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: var(--gradient);
+  color: #fff;
+  font-family: var(--heading);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
 /* Programme */
 .days {
   display: grid;

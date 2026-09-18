@@ -22,7 +22,7 @@ function Facts({ report }: { report: FormationReport }) {
     { label: 'Période', value: report.periode },
     { label: 'Durée', value: report.duree },
     { label: 'Participants', value: `${report.participants} participants` },
-    { label: 'Anim�e par', value: report.formateur },
+    { label: 'Animée par', value: report.formateur },
   ]
   return (
     <dl className={styles.facts} data-reveal>
@@ -88,6 +88,7 @@ function ReportBody({ report }: { report: FormationReport }) {
               <li key={r}><Check />{r}</li>
             ))}
           </ul>
+          {report.impact && <p className={styles.impact}>{report.impact}</p>}
         </div>
       </div>
     </>
