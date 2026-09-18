@@ -1,0 +1,70 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1;
+}
+
+.mark {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 8px rgba(47, 99, 255, 0.35));
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.name {
+  font-family: var(--heading);
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 2.2px;
+  color: var(--text-h);
+  white-space: nowrap;
+}
+
+.x {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 4.5px;
+  padding-left: 4.5px;
+  color: var(--text);
+}
+
+.group::before,
+.group::after {
+  content: '';
+  width: 12px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.6;
+}
+
+.lg .mark {
+  width: 46px;
+  height: 46px;
+}
+
+.lg .name {
+  font-size: 20px;
+  letter-spacing: 2.6px;
+}
+
+.lg .group {
+  font-size: 9.5px;
+}

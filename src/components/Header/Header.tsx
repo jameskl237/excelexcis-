@@ -4,6 +4,7 @@ import { cn } from '../../lib/cn'
 import { useTheme } from '../../hooks/useTheme'
 import type { NavLink as NavLinkType } from '../../types'
 import { ThemeToggle } from '../ThemeToggle/ThemeToggle'
+import { Logo } from '../Logo/Logo'
 import styles from './Header.module.css'
 
 const navLinks: NavLinkType[] = [
@@ -35,8 +36,8 @@ export function Header() {
   return (
     <header className={cn(styles.header, transparent && styles.transparent)}>
       <div className={styles.inner}>
-        <Link to="/" className={styles.logo}>
-          excelcis group
+        <Link to="/" className={styles.logo} aria-label="Excelcis Group — accueil">
+          <Logo />
         </Link>
 
         <div className={styles.group}>

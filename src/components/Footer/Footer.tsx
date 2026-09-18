@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Logo } from '../Logo/Logo'
 import styles from './Footer.module.css'
 
 const navColumns = [
@@ -26,7 +27,10 @@ export function Footer() {
       <div className={styles.inner}>
         <div className={styles.top}>
           <div className={styles.brandCol}>
-            <Link to="/" className={styles.logo}>excelcis group</Link>
+            <Link to="/" className={styles.logo} aria-label="Excelcis Group — accueil">
+              <Logo size="lg" />
+            </Link>
+            <p className={styles.motto}>L'excellence au service de solutions durables</p>
             <p className={styles.tagline}>
               Entreprise multi-panoramique — solutions sur mesure, archivage,
               conseil et formation pour les entreprises et institutions.

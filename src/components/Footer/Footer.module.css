@@ -21,14 +21,17 @@
 }
 
 .logo {
-  font-family: var(--heading);
-  font-weight: 800;
-  font-size: 21px;
-  letter-spacing: -0.5px;
-  color: var(--text-h);
+  display: inline-flex;
   text-decoration: none;
-  display: inline-block;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
+}
+
+.motto {
+  font-family: var(--heading);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-h);
+  margin: 0 0 10px;
 }
 
 .tagline {

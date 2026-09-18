@@ -34,7 +34,7 @@ export function Hero() {
 
         <h1 className={`${styles.title} rv`}>
           Bienvenue chez{' '}
-          <span className="gradient-text">excelcis group</span>
+          <span className={`gradient-text ${styles.brand}`}>excelcis group</span>
         </h1>
 
         <p className={`${styles.description} rv rv-d1`}>
