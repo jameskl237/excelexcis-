@@ -21,8 +21,8 @@ function Facts({ report }: { report: FormationReport }) {
     { label: 'Lieu', value: report.lieu },
     { label: 'Période', value: report.periode },
     { label: 'Durée', value: report.duree },
-    { label: 'Participants', value: `${report.participants} cadres` },
-    { label: 'Formateur', value: report.formateur },
+    { label: 'Participants', value: `${report.participants} participants` },
+    { label: 'Anim�e par', value: report.formateur },
   ]
   return (
     <dl className={styles.facts} data-reveal>
