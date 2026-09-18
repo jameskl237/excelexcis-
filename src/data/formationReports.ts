@@ -20,6 +20,7 @@ export interface FormationReport {
   programme: ProgrammeDay[]
   methodologie: string[]
   resultats: string[]
+  impact?: string
   appreciation: string
   recommandations: string[]
   captions: string[]
